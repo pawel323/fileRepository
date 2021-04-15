@@ -5,6 +5,7 @@
 <form method="POST" action="upload.php" enctype="multipart/form-data">
   <div class="mb-3">
     <h3>Wyślij zdjęcia</h3>
+    <h5>Dopuszczane rozszerzenie .png</h5>
     
     <input type="file" class="custom-file-input" name="image[]" multiple="">
     
