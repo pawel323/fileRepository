@@ -18,10 +18,10 @@
     <div class="collapse navbar-collapse" id="nawigacja">
       <ul class="navbar-nav ">
         <li class="nav-item">
-          <a class="nav-link" >Dodaj zdjęcia</a>
+          <a class="nav-link" href="index.php">Dodaj zdjęcia</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link">Pobierz zdjęcia</a>
+          <a class="nav-link" href="displayUploaded.php">Pobierz zdjęcia</a>
         </li>
        
       </ul>
