@@ -12,8 +12,8 @@ if(isset($_FILES['image'])){
          if(in_array($file_ext,$extensions)=== false){
              $errors[]="Rozszerzenie niedozwolone.";
          } 
-         if($file_size[$key] > 2097152){
-             $errors[]='Rozmiar pliku nie może być większy niż 2MB.';
+         if($file_size[$key] > 5000000){
+             $errors[]='Rozmiar pliku nie może być większy niż 5MB.';
          } 
      }  
      if(empty($errors)==true){        
