@@ -19,7 +19,7 @@ if(isset($_FILES['image'])){
      if(empty($errors)==true){        
          foreach($file_name as $key => $value){ 
              move_uploaded_file($file_tmp[$key],"img/".$file_name[$key]);
-             echo "Przesłano wybrane pliki!";
+             header('Location: index.php');
          } 
      }
      else{
