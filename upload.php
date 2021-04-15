@@ -5,7 +5,7 @@ if(isset($_FILES['image'])){
      $file_size =$_FILES['image']['size'];
      $file_tmp =$_FILES['image']['tmp_name']; 
      $file_type=$_FILES['image']['type'];
-     $extensions= array("jpeg","jpg","png", "webp", "pdf"); 
+     $extensions= array("png"); 
     foreach($file_name as $key => $value){ 
          $tmp = explode('.',$_FILES['image']['name'][$key]);
          $file_ext = strtolower(end($tmp));
