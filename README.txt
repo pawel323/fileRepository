@@ -1,1 +1,1 @@
-Very simple version of photo repository realized thanks PHP and Bootstrap 5. User can send a few images on server and display them. Acceptable extension is .png. Site is available on this url:
+Very simple version of photo repository realized thanks PHP and Bootstrap 5. User can send a few images on server and display them. Acceptable extension is .png. Site is available on this url: https://simplephotorepository.000webhostapp.com/
