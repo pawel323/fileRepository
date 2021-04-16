@@ -26,7 +26,7 @@
 				header('Location: index.php');
 			}
 			else{
-				$rezultat = mysqli_query($polaczenie, sprintf("SELECT * FROM uzytkownicy WHERE nazwa='%s'", mysqli_real_escape_string($polaczenie,$login)));
+				$rezultat = mysqli_query($polaczenie, sprintf("SELECT * FROM uzytkownicy WHERE login='%s'", mysqli_real_escape_string($polaczenie,$login)));
 
 				if (!$rezultat) throw new Exception($polaczenie->error);
 
@@ -36,7 +36,7 @@
 					if (password_verify($haslo, $wiersz['haslo'])){
 						$_SESSION['zalogowany'] = true;
 						$_SESSION['uprawnienia'] = $wiersz['uprawnienia'];
-						header('Location: gra.php');
+						header('Location: uploadPage.php');
 						unset($_SESSION['bladLogowania']);
 					}
 					else{
