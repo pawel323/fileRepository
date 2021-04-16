@@ -1,6 +1,5 @@
 <?php
 if (file_exists('header.php')) include ('header.php');
-if (file_exists('middleUpload.php')) include ('middleUpload.php');
 if(isset($_SESSION['zalogowany'])){
    header('Location: uploadPage.php');
   }
