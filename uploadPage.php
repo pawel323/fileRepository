@@ -10,7 +10,7 @@ foreach($images as $image){
 }
 $maxSize = $maxSize / 1048576;
 $maxSize = number_format($maxSize, 2, '.', '');
-if ($maxSize < 3){
+if ($maxSize < 100){
   if (file_exists('middleUpload.php')) include ('middleUpload.php');  
 }
 else{
