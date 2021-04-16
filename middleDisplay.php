@@ -2,7 +2,7 @@
 <div class="container">
 <div class="row">
 <?php
-$files = "img/";
+$files = 'img'.'/'.$_SESSION['user'].'/';
 $images = glob($files."*.png");
 foreach($images as $image){
     echo '<div class="col-sm-5 offset-sm-1">';
