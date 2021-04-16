@@ -18,7 +18,10 @@ if((isset($_POST['login'])) && (isset($_POST['pass']))){
         else{
             if ($polaczenie->query("INSERT INTO uzytkownicy VALUES (NULL, '$login', '$haslo_hash', '1')"))
 			{
-				mkdir('img/'$login'');
+                $folderPath = 'img'.'/'.$login;
+                if (!file_exists($folderPath)) {
+                    mkdir($folderPath, 0777, true);
+                }
                 header('Location: index.php');
 				
 			}
