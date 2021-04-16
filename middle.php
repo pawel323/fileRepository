@@ -27,7 +27,7 @@
     ?>
   </div>
   
-  <button type="submit" class="btn btn-secondary">Wyślij</button>
+  <button type="submit" class="btn btn-secondary">Zaloguj</button>
   <?php
     if (isset($_SESSION['e_baza'])){
       echo $_SESSION['e_baza'];
