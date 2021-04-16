@@ -7,7 +7,7 @@
     <h3>Zarejestruj się</h3>
     <label for="login">Login</label>
     
-    <input type="text" class="custom-input" name="login"/>
+    <input type="text" class="form-control" name="login"/>
     <?php
     if (isset($_SESSION['bladRejestracji'])){
       echo $_SESSION['bladRejestracji'];
@@ -18,7 +18,7 @@
   </div>
   <div class="mb-3">
   <label for="pass">Hasło</label>
-    <input type="password" class="custom-input" name="pass"/>
+    <input type="password" class="form-control" name="pass"/>
     <?php
     if (isset($_SESSION['bladRejestracji'])){
       echo $_SESSION['bladRejestracji'];
