@@ -18,7 +18,7 @@ if(isset($_FILES['image'])){
      }  
      if(empty($errors)==true){        
          foreach($file_name as $key => $value){ 
-             move_uploaded_file($file_tmp[$key],"img/".$file_name[$key]);
+             move_uploaded_file($file_tmp[$key],"img/".$_SESSION['user'].'/'.$file_name[$key]);
              header('Location: index.php');
          } 
      }
