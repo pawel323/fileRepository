@@ -2,13 +2,18 @@
 <div class="container">
 <div class="row align-items-center">
 <div class="col-sm-6 offset-sm-3">
-<form method="POST" action="upload.php" enctype="multipart/form-data">
+<form method="POST" action="login.php">
   <div class="mb-3">
-    <h3>Wyślij zdjęcia</h3>
-    <h5>Dopuszczane rozszerzenie .png</h5>
+    <h3>Zaloguj się</h3>
+    <label for="login">Login</label>
     
-    <input type="file" class="custom-file-input" name="image[]" multiple="">
+    <input type="text" class="custom-input" name="login"/>
     
+    
+  </div>
+  <div class="mb-3">
+  <label for="pass">Hasło</label>
+    <input type="password" class="custom-input" name="pass"/>
   </div>
   
   <button type="submit" class="btn btn-secondary">Wyślij</button>
