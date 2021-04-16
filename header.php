@@ -23,9 +23,15 @@
         <li class="nav-item">
           <a class="nav-link" href="displayUploaded.php">Pobierz zdjęcia</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="register.php">Zarejestruj się</a>
-        </li>
+        <?php
+        if(isset($_SESSION['zalogowany'])){
+          echo  '<li class="nav-item"><a class="nav-link" href="logout.php">Wyloguj się</a></li>';
+        }
+        else{
+          echo '<li class="nav-item"><a class="nav-link" href="register.php">Zarejestruj się</a></li>';
+        }
+        ?>
+        
        
       </ul>
     </div>
