@@ -36,6 +36,7 @@
 					if (password_verify($haslo, $wiersz['haslo'])){
 						$_SESSION['zalogowany'] = true;
 						$_SESSION['uprawnienia'] = $wiersz['uprawnienia'];
+						$_SESSION['user'] = $login;
 						header('Location: uploadPage.php');
 						unset($_SESSION['bladLogowania']);
 					}
