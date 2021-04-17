@@ -38,7 +38,7 @@ if(isset($_SESSION['rozmiar'])){
 function display($image){
     echo '<div class="col-sm-4 ">';
     echo '<embed src="'.$image.'" height=200 width=350/><br/>';
-    echo '<a href="'.$image.'" download="'.$image.'" style="text-decoration:none;color:black">Pobierz plik</a>'; 
+    echo '<form action="downloadFile.php" method="POST"><input type="hidden" value="'.$image.'" name="pobierane"/><button type="submit" class="btn btn-secondary" style="margin-bottom:5px">Pobierz</button></form>'; 
     echo '<form action="deleteFile.php" method="POST"><input type="hidden" value="'.$image.'" name="usuwane"/><button type="submit" class="btn btn-secondary">Usuń</button></form>';
     echo '</div>'; 
 }
