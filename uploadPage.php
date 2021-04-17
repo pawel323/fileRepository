@@ -8,9 +8,29 @@ $images = glob($files."*.jpg");
 foreach($images as $image){
     $maxSize += filesize($image);
 }
+$images = glob($files."*.jpeg");
+foreach($images as $image){
+    $maxSize += filesize($image);
+}
+$images = glob($files."*.png");
+foreach($images as $image){
+    $maxSize += filesize($image);
+}
+$images = glob($files."*.pdf");
+foreach($images as $image){
+    $maxSize += filesize($image);
+}
+$images = glob($files."*.txt");
+foreach($images as $image){
+    $maxSize += filesize($image);
+}
+$images = glob($files."*.docx");
+foreach($images as $image){
+    $maxSize += filesize($image);
+}
 $maxSize = $maxSize / 1048576;
 $maxSize = number_format($maxSize, 2, '.', '');
-if ($maxSize < 100){
+if ($maxSize < 5){
   if (file_exists('middleUpload.php')) include ('middleUpload.php');  
 }
 else{
