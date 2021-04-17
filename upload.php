@@ -6,7 +6,7 @@ if(isset($_FILES['image']))
      $file_size =$_FILES['image']['size'];
      $file_tmp =$_FILES['image']['tmp_name']; 
      $file_type=$_FILES['image']['type'];
-     $extensions= array("png", "jpeg", "jpg", "pdf", "txt"); 
+     $extensions= array("png", "jpeg", "jpg", "pdf", "txt", "docx"); 
      $validate_ok = true;
     foreach($file_name as $key => $value)
     { 
