@@ -13,6 +13,18 @@
   
   <button type="submit" class="btn btn-secondary">Wyślij</button>
 </form>
+<?php
+if(isset($_SESSION['bladRozszerzenia'])){
+  echo $_SESSION['bladRozszerzenia'];
+  unset($_SESSION['bladRozszerzenia']);
+}
+?>
+<?php
+if(isset($_SESSION['bladRozmiaru'])){
+  echo $_SESSION['bladRozmiaru'];
+  unset($_SESSION['bladRozmiaru']);
+}
+?>
 </div>
 </div>
 </div>
