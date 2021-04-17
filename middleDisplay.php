@@ -34,35 +34,32 @@ $_SESSION['rozmiar'] = '<h3 style="text-align:center">Zajęte '.$maxSize." MB ze
 if(isset($_SESSION['rozmiar'])){
     echo $_SESSION['rozmiar'];
 }
-foreach($jpg as $image){
-    echo '<div class="col-sm-5 offset-sm-1">';
-    echo '<embed src="'.$image.'" height=200px width=300px/>';
+
+function display($image){
+    echo '<div class="col-sm-4 ">';
+    echo '<embed src="'.$image.'" height=200 width=350/><br/>';
+    echo '<a href="'.$image.'" download="'.$image.'" style="text-decoration:none;color:black">Pobierz plik</a>'; 
+    echo '<form action="deleteFile.php" method="POST"><input type="hidden" value="'.$image.'" name="usuwane"/><button type="submit" class="btn btn-secondary">Usuń</button></form>';
     echo '</div>'; 
+}
+
+foreach($jpg as $image){
+    display($image);
 }
 foreach($jpeg as $image){
-    echo '<div class="col-sm-5 offset-sm-1">';
-    echo '<embed src="'.$image.'" height=200px width=300px/>';
-    echo '</div>'; 
+    display($image);
 }
 foreach($png as $image){
-    echo '<div class="col-sm-5 offset-sm-1">';
-    echo '<embed src="'.$image.'" height=200 width=300/>';
-    echo '</div>'; 
+    display($image); 
 }
 foreach($pdf as $image){
-    echo '<div class="col-sm-5 offset-sm-1">';
-    echo '<embed src="'.$image.'" height=200px width=300px/>';
-    echo '</div>'; 
+    display($image); 
 }
 foreach($txt as $image){
-    echo '<div class="col-sm-5 offset-sm-1">';
-    echo '<embed src="'.$image.'" height=200px width=300px/>';
-    echo '</div>'; 
+    display($image);
 }
 foreach($docx as $image){
-    echo '<div class="col-sm-5 offset-sm-1">';
-    echo '<embed src="'.$image.'" height=200 width=300/>';
-    echo '</div>'; 
+    display($image); 
 }
 ?>
 </div>
