@@ -25,6 +25,7 @@
         </li>
         <?php
         if(isset($_SESSION['zalogowany'])){
+          echo  '<li class="nav-item"><a class="nav-link" href="manageProfil.php">Profil</a></li>';
           echo  '<li class="nav-item"><a class="nav-link" href="logout.php">Wyloguj się</a></li>';
         }
         else{
