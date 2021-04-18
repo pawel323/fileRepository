@@ -38,7 +38,14 @@
 						$_SESSION['id'] = $wiersz['id'];
 						$_SESSION['uprawnienia'] = $wiersz['uprawnienia'];
 						$_SESSION['user'] = $login;
-						header('Location: uploadPage.php');
+						switch ($_SESSION['uprawnienia']){
+							case 0:
+								header('Location: administration.php');
+								break;
+							case 1:
+								header('Location: uploadPage.php');
+								break;
+						}
 						unset($_SESSION['bladLogowania']);
 					}
 					else{
