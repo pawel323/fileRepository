@@ -40,10 +40,10 @@
 						$_SESSION['user'] = $login;
 						switch ($_SESSION['uprawnienia']){
 							case 0:
-								header('Location: administration.php');
+								header('Location: listaUzytkownikow.php');
 								break;
 							case 1:
-								header('Location: uploadPage.php');
+								header('Location: wysylaniePlikow.php');
 								break;
 						}
 						unset($_SESSION['bladLogowania']);

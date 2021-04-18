@@ -18,10 +18,10 @@
     <div class="collapse navbar-collapse" id="nawigacja">
       <ul class="navbar-nav ">
         <li class="nav-item">
-          <a class="nav-link" href="administration.php">Lista użytkowników</a>
+          <a class="nav-link" href="listaUzytkownikow.php">Lista użytkowników</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="manageProfil.php">Profil</a>
+            <a class="nav-link" href="zarzadzanieProfilem.php">Profil</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="logout.php">Wyloguj się</a>

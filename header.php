@@ -18,18 +18,18 @@
     <div class="collapse navbar-collapse" id="nawigacja">
       <ul class="navbar-nav ">
         <li class="nav-item">
-          <a class="nav-link" href="uploadPage.php">Dodaj zdjęcia</a>
+          <a class="nav-link" href="wysylaniePlikow.php">Dodaj zdjęcia</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="displayUploaded.php">Pobierz zdjęcia</a>
+          <a class="nav-link" href="wyswietlaniePlikow.php">Pobierz zdjęcia</a>
         </li>
         <?php
         if(isset($_SESSION['zalogowany'])){
-          echo  '<li class="nav-item"><a class="nav-link" href="manageProfil.php">Profil</a></li>';
+          echo  '<li class="nav-item"><a class="nav-link" href="zarzadzanieProfilem.php">Profil</a></li>';
           echo  '<li class="nav-item"><a class="nav-link" href="logout.php">Wyloguj się</a></li>';
         }
         else{
-          echo '<li class="nav-item"><a class="nav-link" href="register.php">Zarejestruj się</a></li>';
+          echo '<li class="nav-item"><a class="nav-link" href="rejestracja.php">Zarejestruj się</a></li>';
         }
         ?>
         

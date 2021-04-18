@@ -42,7 +42,7 @@
                     echo '<input type="hidden" value="'.$userLogin.'" name="userLogin"/>';
                     echo '<button type="submit" class="btn btn-secondary" style="margin-top:5px;margin-bottom:5px">Usuń użytkownika</button>';
                     echo '</form>';
-                    echo '<form method="POST" action="displayDirectories.php">';
+                    echo '<form method="POST" action="wyswietlaniePlikowAdmin.php">';
                     echo '<input type="hidden" value="'.$userLogin.'" name="userLogin"/>';
                     echo '<button type="submit" class="btn btn-secondary" style="margin-top:5px;margin-bottom:5px">Pokaż folder</button>';
                     echo '</form>';

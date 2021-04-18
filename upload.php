@@ -16,13 +16,13 @@ if(isset($_FILES['image']))
          {
              $validate_ok = false;
              $_SESSION['bladRozszerzenia'] = '<div>Rozszerzenie niedozwolone</div>';
-             header('Location: uploadPage.php');
+             header('Location: wysylaniePlikow.php');
          } 
          if($file_size[$key] > 5000000)
          {
              $validate_ok = false;
             $_SESSION['bladRozmiaru'] = 'Rozmiar pliku nie może być większy niż 5MB. ';
-            header('Location: uploadPage.php');
+            header('Location: wysylaniePlikow.php');
          } 
      }  
      if ($validate_ok === true)
@@ -30,7 +30,7 @@ if(isset($_FILES['image']))
          foreach($file_name as $key => $value)
          { 
              move_uploaded_file($file_tmp[$key],"img/".$_SESSION['user'].'/'.$file_name[$key]);
-             header('Location: uploadPage.php');
+             header('Location: wysylaniePlikow.php');
          } 
      }
     

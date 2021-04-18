@@ -10,12 +10,12 @@ session_start();
         if($polaczenie->connect_errno!=0)
         {
             $_SESSION['e_baza'] = "Błąd łączenia z bazą danych";
-            header('Location: administration.php');
+            header('Location: listaUzytkownikow.php');
         }
         else{
             $polaczenie->query("DELETE FROM uzytkownicy WHERE id='$userId'");
             delete_files('img'.'/'.$userLogin);
-            header('Location: administration.php');
+            header('Location: listaUzytkownikow.php');
 
         }
 

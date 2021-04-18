@@ -29,11 +29,11 @@ if((isset($_POST['oldPass'])) && (isset($_POST['newPass']))){
 					$wiersz =  $rezultat->fetch_assoc();
 					if (password_verify($stareHaslo, $wiersz['haslo'])){
 						$polaczenie->query("UPDATE uzytkownicy SET haslo='$noweHaslo_hash' WHERE id='$id'");
-                        header('Location: manageProfil.php');
+                        header('Location: zarzadzanieProfilem.php');
 					}
 					else{
 						$_SESSION['bladStaregoHasla'] = 'Nieprawidłowe hasło!';
-						header('Location: manageProfil.php');
+						header('Location: zarzadzanieProfilem.php');
 					}
 				}
 				

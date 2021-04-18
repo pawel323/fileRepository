@@ -13,7 +13,7 @@ if((isset($_POST['login'])) && (isset($_POST['pass']))){
         if($polaczenie->connect_errno!=0)
         {
             $_SESSION['e_baza'] = "Błąd łączenia z bazą danych";
-            header('Location: dodaniePracownika.php');
+            header('Location: rejestracja.php');
         }
         else{
             if ($polaczenie->query("INSERT INTO uzytkownicy VALUES (NULL, '$login', '$haslo_hash', '1')"))

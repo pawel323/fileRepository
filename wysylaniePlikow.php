@@ -2,35 +2,35 @@
 session_start();
 if (file_exists('header.php')) include ('header.php');
 if(isset($_SESSION['zalogowany'])){
-$maxSize = 0;
+$directorySize = 0;
 $files = 'img'.'/'.$_SESSION['user'].'/';
 $images = glob($files."*.jpg");
 foreach($images as $image){
-    $maxSize += filesize($image);
+    $directorySize += filesize($image);
 }
 $images = glob($files."*.jpeg");
 foreach($images as $image){
-    $maxSize += filesize($image);
+    $directorySize += filesize($image);
 }
 $images = glob($files."*.png");
 foreach($images as $image){
-    $maxSize += filesize($image);
+    $directorySize += filesize($image);
 }
 $images = glob($files."*.pdf");
 foreach($images as $image){
-    $maxSize += filesize($image);
+    $directorySize += filesize($image);
 }
 $images = glob($files."*.txt");
 foreach($images as $image){
-    $maxSize += filesize($image);
+    $directorySize += filesize($image);
 }
 $images = glob($files."*.docx");
 foreach($images as $image){
-    $maxSize += filesize($image);
+    $directorySize += filesize($image);
 }
-$maxSize = $maxSize / 1048576;
-$maxSize = number_format($maxSize, 2, '.', '');
-if ($maxSize < 5){
+$directorySize = $directorySize / 1048576;
+$directorySize = number_format($directorySize, 2, '.', '');
+if ($directorySize < 100){
   if (file_exists('middleUpload.php')) include ('middleUpload.php');  
 }
 else{
@@ -39,7 +39,7 @@ else{
 }
 else{
   echo '<h3 style="text-align:center">Tylko dla zalogowanych użytkowników</h3></div><br/>';
-  if (file_exists('middle.php')) include ('middle.php');
+  if (file_exists('middleLogin.php')) include ('middleLogin.php');
 }
 if (file_exists('footer.php')) include ('footer.php');
 ?>

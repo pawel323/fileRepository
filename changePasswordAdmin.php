@@ -11,12 +11,12 @@ if(isset($_POST['pass'])){
         if($polaczenie->connect_errno!=0)
         {
             $_SESSION['e_baza'] = "Błąd łączenia z bazą danych";
-            header('Location: administration.php');
+            header('Location: listaUzytkownikow.php');
         }
         else{
             $polaczenie->query("UPDATE uzytkownicy SET haslo='$haslo_hash' WHERE id='$userId'");
             unset($_SESSION['e_haslo']);
-            header('Location: administration.php');
+            header('Location: listaUzytkownikow.php');
 
         }
 }
