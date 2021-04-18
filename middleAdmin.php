@@ -34,8 +34,9 @@
                     echo '<input type="password" class="form-control" name="pass">';
                     echo '<button type="submit" class="btn btn-secondary" style="margin-top:5px;margin-bottom:5px">Zmień hasło</button>';
                     echo '</form>';
-                    echo "<form>";
+                    echo '<form method="POST" action="deleteUser.php">';
                     echo '<input type="hidden" value="'.$userId.'" name="userId"/>';
+                    echo '<input type="hidden" value="'.$userLogin.'" name="userLogin"/>';
                     echo '<button type="submit" class="btn btn-secondary" style="margin-top:5px;margin-bottom:5px">Usuń użytkownika</button>';
                     echo '</form>';
                     }
