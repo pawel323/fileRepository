@@ -21,7 +21,7 @@
           <a class="nav-link" href="administration.php">Lista użytkowników</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="displayUploaded.php">Lista katalogów</a>
+          <a class="nav-link" href="displayDirectories.php">Lista katalogów</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="manageProfil.php">Profil</a>
