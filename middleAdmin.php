@@ -3,6 +3,15 @@
         <div class="row">
             <div class="col-sm-6 offset-sm-3">
             <?php
+            if(isset($_SESSION['e_haslo'])){
+                echo $_SESSION['e_haslo'];
+            }
+            
+            if (isset($_SESSION['e_baza'])){
+                echo $_SESSION['e_baza'];
+                unset($_SESSION['e_baza']);
+            }
+   
             require_once "connect.php";
             $polaczenie = @new mysqli($host, $db_user, $db_password, $db_name);
             if ($polaczenie->connect_errno!=0)
@@ -18,6 +27,7 @@
                     $userLogin = $row["login"];
                     $userPass = $row["haslo"];
                     echo '<form method="POST" action="changePasswordAdmin.php">';
+                    echo '<input type="hidden" value="'.$userId.'" name="userId"/>';
                     echo '<label for="login">Login</label>';
                     echo '<input type="text" class="form-control" name="login" value="'.$userLogin.'"disabled>';
                     echo '<label for="pass">Hasło</label>';
