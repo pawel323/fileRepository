@@ -1,7 +1,9 @@
 <body>
     <div class="container">
         <div class="row">
+        
             <div class="col-sm-6 offset-sm-3">
+            <h4 style="text-align:center">Zarejestrowani użytkownicy</h4>
             <?php
             if(isset($_SESSION['e_haslo'])){
                 echo $_SESSION['e_haslo'];
@@ -26,6 +28,7 @@
                     $userId = $row["id"];
                     $userLogin = $row["login"];
                     $userPass = $row["haslo"];
+                    
                     echo '<form method="POST" action="changePasswordAdmin.php">';
                     echo '<input type="hidden" value="'.$userId.'" name="userId"/>';
                     echo '<label for="login">Login</label>';
@@ -39,6 +42,11 @@
                     echo '<input type="hidden" value="'.$userLogin.'" name="userLogin"/>';
                     echo '<button type="submit" class="btn btn-secondary" style="margin-top:5px;margin-bottom:5px">Usuń użytkownika</button>';
                     echo '</form>';
+                    echo '<form method="POST" action="displayDirectories.php">';
+                    echo '<input type="hidden" value="'.$userLogin.'" name="userLogin"/>';
+                    echo '<button type="submit" class="btn btn-secondary" style="margin-top:5px;margin-bottom:5px">Pokaż folder</button>';
+                    echo '</form>';
+                    echo '<hr style="height: 10px; background: black; border: 0px;">';
                     }
                 }
                 else{
