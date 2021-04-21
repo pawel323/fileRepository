@@ -11,9 +11,19 @@ if(isset($_SESSION['zalogowany'])){
     }
 }
 else{
-    if (file_exists('header.php')) include ('header.php');
-    if (file_exists('middleLogin.php')) include ('middleLogin.php');
-    if (file_exists('footer.php')) include ('footer.php');
+    if (file_exists('installer.php')){
+        header('Location: installer.php');
+    }
+    if ((!file_exists('installer.php')) && (file_exists('dodawanieKontaAdmina.php'))){
+        header('Location: dodawanieKontaAdmina.php');
+    }
+    else if((!file_exists('installer.php')) && (!file_exists('dodawanieKontaAdmina.php'))){
+        
+        if (file_exists('header.php')) include ('header.php');
+        if (file_exists('middleLogin.php')) include ('middleLogin.php');
+        if (file_exists('footer.php')) include ('footer.php');
+    }
+
 }
 
 ?>
