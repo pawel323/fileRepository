@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_POST['pass'])){
+if(strlen($_POST['pass']) > 0){
     $haslo = $_POST['pass'];
     $userId = $_POST['userId'];
     $haslo = htmlentities($haslo, ENT_QUOTES, "UTF-8");
@@ -22,5 +22,6 @@ if(isset($_POST['pass'])){
 }
 else{
     $_SESSION['e_haslo'] = "<div>Podaj nowe hasło</div>";
+    header('Location: listaUzytkownikow.php');
 }
 ?>
