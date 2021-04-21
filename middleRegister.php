@@ -14,6 +14,7 @@
       
     }
     ?>
+   
     
   </div>
   <div class="mb-3">
@@ -25,6 +26,7 @@
       unset($_SESSION['bladRejestracji']);
     }
     ?>
+  
   </div>
   
   <button type="submit" class="btn btn-secondary">Zarejestruj</button>
